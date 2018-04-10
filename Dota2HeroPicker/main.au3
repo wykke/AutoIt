@@ -17,13 +17,13 @@ Global $nextgui
 Global $lastgui
 #EndRegion
 
-#Region ### START Koda GUI section ### Form=c:\users\wykke\desktop\vida de programador\programação\autoit\projeto dota\form1.kxf
+#Region ### START Koda GUI section ### Form=c:\users\wykke\desktop\vida de programador\programaÃ§Äƒo\autoit\projeto dota\form1.kxf
 $FormMain = GUICreate("WyKKe's Dota 2 Assistance", 745, 437, 186, 166)
 $MenuArquivo = GUICtrlCreateMenu("&Arquivo")
 $MenuBanco = GUICtrlCreateMenuItem("Atualizar Banco de dados", $MenuArquivo)
 $MenuAjuda = GUICtrlCreateMenu("A&juda")
 $MenuReport = GUICtrlCreateMenuItem("Reportar Erro", $MenuAjuda)
-$MenuAtt = GUICtrlCreateMenuItem("Verificar Atualizações", $MenuAjuda)
+$MenuAtt = GUICtrlCreateMenuItem("Verificar AtualizaÃ§Å‘es", $MenuAjuda)
 $MenuSobre = GUICtrlCreateMenuItem("Sobre", $MenuAjuda)
 $Tab1 = GUICtrlCreateTab(8, 8, 729, 401)
 
@@ -78,9 +78,9 @@ $Labelw10 = GUICtrlCreateLabel("", 614, 352, 36, 17)
 
 $BotaoReset = GUICtrlCreateButton("Reset", 28, 336, 75, 25)
 
-;sugestões de picks
+;sugestÅ‘es de picks
 
-$TabSheet2 = GUICtrlCreateTabItem("Sugestões de Picks")
+$TabSheet2 = GUICtrlCreateTabItem("SugestÅ‘es de Picks")
 
 $Labelcarry = GUICtrlCreateLabel("Carry (Vantagem %)", 28, 49, 200, 17)
 Global $picc[5]
@@ -509,10 +509,10 @@ While 1
 			_Atualizar("")
 
 		Case $MenuBanco
-			$confir = MsgBox(4,"Você tem certeza?","Você tem certeza que quer atualizar o banco de dado? Isso pode demorar alguns minutos!")
+			$confir = MsgBox(4,"VocÄ™ tem certeza?","VocÄ™ tem certeza que quer atualizar o banco de dado? Isso pode demorar alguns minutos!")
 			if $confir = 6 Then ShellExecute("atualizadorBD.exe")
 			if @error = not 0 Then
-				MsgBox(0,"Erro","Não foi encontrado o arquivo de atualização no seu computador, reinstale o programa e tente novamente")
+				MsgBox(0,"Erro","NÄƒo foi encontrado o arquivo de atualizaÃ§Äƒo no seu computador, reinstale o programa e tente novamente")
 			Else
 				Exit
 			EndIf
@@ -525,10 +525,10 @@ While 1
 WEnd
 
 Func _erroatt()
-	$confir = MsgBox(4,"Atualizar banco de dados?","Parece que não foi encontrado alguma informação em seu computador. Gostaria de atualizar o banco de dados para solucionar esse problema? Isso pode demorar alguns minutos! Se escolher não, o programa não funcionará direito")
+	$confir = MsgBox(4,"Atualizar banco de dados?","Parece que nÄƒo foi encontrado alguma informaÃ§Äƒo em seu computador. Gostaria de atualizar o banco de dados para solucionar esse problema? Isso pode demorar alguns minutos! Se escolher nÄƒo, o programa nÄƒo funcionarÃ¡ direito")
 			if $confir = 6 Then ShellExecute("atualizadorBD.exe")
 			if @error = not 0 Then
-				MsgBox(0,"Erro","Não foi encontrado o arquivo de atualização no seu computador, reinstale o programa e tente novamente")
+				MsgBox(0,"Erro","NÄƒo foi encontrado o arquivo de atualizaÃ§Äƒo no seu computador, reinstale o programa e tente novamente")
 			Else
 				Exit
 			EndIf
